@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  besuubunturbb:
+    build: .
+    container_name: besuUbuntuRBB
+    ports:
+      - "8550:8545"
+    volumes:
+      - ./../NodeFile:/Node/config
+    stdin_open: true
+    tty: true
+  besuubunturbb1:
+    build: .
+    container_name: besuUbuntuRBB1
+    ports:
+      - "8549:8545"
+    volumes:
+      - ./../NodeFile1:/Node/config
+    stdin_open: true
+    tty: true
+  besuubunturbb2:
+    build: .
+    container_name: besuUbuntuRBB2
+    ports:
+      - "8548:8545"
+    volumes:
+      - ./../NodeFile2:/Node/config
+    stdin_open: true
+    tty: true
