@@ -1,19 +1,19 @@
 #!/bin/bash
-source ./configEnv1.txt
-for valor in ${bootNode[*]}
+source ./configEnv.txt
+for boot in ${bootNode[*]}
 do
-  docker stop -t 0 ${valor}
-  docker start ${valor}
+  docker stop -t 0 ${boot}
+  docker start ${boot}
 done
 
-for valor in ${writerNode[*]}
+for writer in ${writerNode[*]}
 do
-  docker stop -t 0 ${valor}
-  docker start ${valor}
+  docker stop -t 0 ${writer}
+  docker start ${writer}
 done
 
-for valor in ${validatorNode[*]}
+for validator in ${validatorNode[*]}
 do
-  docker stop -t 0 ${valor}
-  docker start ${valor}
+  docker stop -t 0 ${validator}
+  docker start ${validator}
 done
