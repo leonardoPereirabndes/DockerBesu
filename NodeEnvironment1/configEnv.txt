@@ -2,4 +2,4 @@
 export bootNode=(boot1 boot2 boot3)
 export validatorNode=(validator1 validator2 validator3)
 export writerNode=(writer1 writer2 writer3)
-export initialValidator=(validator1 validator3)
+export initialValidator=(validator1)
