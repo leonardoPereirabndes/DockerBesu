@@ -1,21 +1,21 @@
 #!/bin/bash
 source ./configEnv.txt
 portCont=8551
-for valor in ${bootNode[*]}
+for boot in ${bootNode[*]}
 do
-  mkdir -p -m 777 ${valor}
-  docker run -d -ti --volume $(pwd)/${valor}:/Node/config --name ${valor}  leotestedockerhub/besu:latest
+  mkdir -p -m 777 ${boot}
+  docker run -d -ti --volume $(pwd)/${boot}:/Node/config --name ${boot}  leotestedockerhub/besu:latest
 done
 
-for valor in ${validatorNode[*]}
+for validator in ${validatorNode[*]}
 do
-  mkdir -p -m 777 ${valor}
-  docker run -d -ti --volume $(pwd)/${valor}:/Node/config --name ${valor}  leotestedockerhub/besu:latest
+  mkdir -p -m 777 ${validator}
+  docker run -d -ti --volume $(pwd)/${validator}:/Node/config --name ${validator}  leotestedockerhub/besu:latest
 done
 
-for valor in ${writerNode[*]}
+for writer in ${writerNode[*]}
 do
-  mkdir -p -m 777 ${valor}
-  docker run -d -ti --volume $(pwd)/${valor}:/Node/config --name ${valor} -p ${portCont}:8545 leotestedockerhub/besu:latest
+  mkdir -p -m 777 ${writer}
+  docker run -d -ti --volume $(pwd)/${writer}:/Node/config --name ${writer} -p ${portCont}:8545 leotestedockerhub/besu:latest
   portCont=$[${portCont} + 1]
 done
