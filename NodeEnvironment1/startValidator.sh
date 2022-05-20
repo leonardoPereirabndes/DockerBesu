@@ -3,10 +3,10 @@ source ./configEnv.txt
 
 read -p "nome do nó validator:" entradaValidator
 
-for valor in ${bootNode[*]}
+for boot in ${bootNode[*]}
 do
- ipBoot=`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ${valor}`
- addressBoot=`docker exec ${valor}  cat ./config/bootnodePubKey`
+ ipBoot=`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ${boot}`
+ addressBoot=`docker exec ${boot}  cat ./config/bootnodePubKey`
  eNode=`echo "enode://${addressBoot:2}@${ipBoot}:30303 "`
  allENodeBoot=`echo "${allENodeBoot}${eNode}"`
 done
