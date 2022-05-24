@@ -2,7 +2,7 @@ Iniciando um Nó
 
 
 # 1.	Iniciando contêiner
-Vamos começar iniciando nossos contêineres docker. Para isso, precisamos começar nossa configuração editando o arquivo configEnv.txt , nesse arquivo você poderá dizer o nome de cada nó que pretende usar dividido em 3 classes de nós boot, validator e  writer. 
+Vamos começar iniciando nossos contêineres docker. Para isso, precisamos começar nossa configuração editando o arquivo configEnv.txt , nesse arquivo você poderá dizer o nome de cada nó que pretende usar, dividido em 3 classes de nós boot, validator e  writer. 
 
           bootNode=(boot1 boot2 boot3) 
           validatorNode=(validator1 validator2 validator3) 
