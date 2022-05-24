@@ -12,9 +12,9 @@ inicialmente o arquivo esta configurado para iniciar com 3 boot, 3 validator e 3
 
 # 1.1.	
 Após ter sido configurado o arquivo configEnv.txt, precisamos executar o script criandocontainer.sh. 
-'''
+```
 ./criandocontainer.sh 
-'''
+```
 # 2.	
 Após o passa 1 ter sido executado, você vai perceber que foi criado uma pasta para cada nó, nessa pasta você pode adicionar as chaves privadas dos nó caso as tenha
 # 3.	
