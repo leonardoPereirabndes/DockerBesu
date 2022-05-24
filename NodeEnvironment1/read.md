@@ -19,16 +19,16 @@ Após ter sido configurado o arquivo configEnv.txt, precisamos executar o script
 Após o passa 1 ter sido executado, você vai perceber que foi criado uma pasta para cada nó, nessa pasta você pode adicionar as chaves privadas dos nó caso as tenha
 # 3.	
 Nesse passo você vai criar as chaves privadas de cada nó e definir o campo extraData para ser adicionado no genesis
-
+```
 ./initialsetting.sh
-	
+```	
 Você vai encontrar na saída do seu terminal o valor do extraData, que você pode adicionar no genesis
 
 # 4.	
 Substitua o seu arquivo genesis pelo arquivo genesis que esta no diretório e rode 
-
+```
 ./copygenesis.sh 
-
+```
 Esse script ira copiar o arquivo genesis para a pasta de cada nó 
 
 # 5.	
