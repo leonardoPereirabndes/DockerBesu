@@ -11,4 +11,4 @@ do
  allENodeBoot=`echo "${allENodeBoot}${eNode}"`
 done
 
-docker exec ${entradaValidator} besu --data-path=data --genesis-file=./config/genesis.json --config-file=./config/config.toml --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host="0.0.0.0" --node-private-key-file=./config/key --rpc-http-port=8545 --bootnodes=${allENodeBoot}
+docker exec ${entradaValidator} besu --data-path=data --genesis-file=./config/genesis.json --config-file=./config/config.toml --rpc-http-enabled --rpc-http-api=ETH,PERM,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host="0.0.0.0" --node-private-key-file=./config/key --rpc-http-port=8545 --bootnodes=${allENodeBoot}
