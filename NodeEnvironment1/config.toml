@@ -1,6 +1,6 @@
 min-gas-price=0
-permissions-accounts-contract-enabled=true
-permissions-accounts-contract-address="0x0000000000000000000000000000000000008888"
-permissions-nodes-contract-enabled=true
-permissions-nodes-contract-address="0x0000000000000000000000000000000000009999"
-permissions-nodes-contract-version=1
+#permissions-accounts-contract-enabled=true
+#permissions-accounts-contract-address="0x0000000000000000000000000000000000008888"
+#permissions-nodes-contract-enabled=true
+#permissions-nodes-contract-address="0x0000000000000000000000000000000000009999"
+#permissions-nodes-contract-version=1
