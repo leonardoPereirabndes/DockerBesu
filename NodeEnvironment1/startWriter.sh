@@ -10,6 +10,6 @@ do
  eNode=`echo "enode://${addressBoot:2}@${ipBoot}:30303 "`
  allENodeBoot=`echo "${allENodeBoot}${eNode}"`
 done
+myIp=`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ${entradaWriter}
 
-
-docker exec ${entradaWriter} besu --data-path=data --config-file=./config/config.toml --genesis-file=./config/genesis.json --rpc-http-enabled --rpc-http-api=ETH,ADMIN,PERM,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host="0.0.0.0"  --node-private-key-file=./config/key --rpc-http-port=8545 --bootnodes=${allENodeBoot}
+docker exec ${entradaWriter} besu --data-path=data --config-file=./config/config.toml --genesis-file=./config/genesis.json  --p2p-host=${myIp} --rpc-http-enabled --rpc-http-api=ETH,ADMIN,PERM,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host="0.0.0.0"  --node-private-key-file=./config/key --rpc-http-port=8545 --bootnodes=${allENodeBoot}
