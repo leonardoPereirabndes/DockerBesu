@@ -12,4 +12,4 @@ do
 done
 
 
-docker exec ${entradaWriter} besu --data-path=data --config-file=./config/config.toml --genesis-file=./config/genesis.json --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host="0.0.0.0"  --node-private-key-file=./config/key --rpc-http-port=8545 --bootnodes=${allENodeBoot}
+docker exec ${entradaWriter} besu --data-path=data --config-file=./config/config.toml --genesis-file=./config/genesis.json --rpc-http-enabled --rpc-http-api=ETH,PERM,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host="0.0.0.0"  --node-private-key-file=./config/key --rpc-http-port=8545 --bootnodes=${allENodeBoot}
